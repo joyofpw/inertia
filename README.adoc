@@ -65,10 +65,15 @@ $inertia = $modules->get('Inertia');
 echo $inertia->render('MyComponent', ["my" => "props"]);
 ```
 
-## References
+## Other Resources
 
 - https://inertiajs.com/
 - https://sebastiandedeyne.com/inertia-js-and-livewire-a-high-level-comparison/
 - https://medium.com/icf-church-developers/processwire-vue-js-a-lovestory-d4d5bca365
 - https://processwire.com/talk/topic/19112-module-page-query-boss/
 
+## Credits
+
+++++
+Made with <i class="fa fa-heart">&#9829;</i> by <a href="http://ninjas.cl" target="_blank">Ninjas</a>.
+++++
