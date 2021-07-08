@@ -58,6 +58,11 @@ This adapter follows the https://inertiajs.com/the-protocol[Inertia Protocol].
 
 The very first request to an Inertia app is just a regular full-page browser request, with no special Inertia headers or data. For these requests, the server returns a full HTML document.
 
+Once an Inertia app has been booted, all subsequent requests to the site are made via XHR with a special _X-Inertia_ header set to `true`. This header indicates that the request is being made by Inertia, and isn't a standard full-page visit.
+
+When the server detects the _X-Inertia_ header, instead of responding with a full HTML document, it returns a JSON response with an encoded page object.
+
+
 Using _Inertia_ with _ProcessWire_ is easy. Just call the `render` function passing the name of your Component and your Properties.
 
 ```php
