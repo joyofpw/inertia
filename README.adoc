@@ -1,0 +1,15 @@
+# Inertia.js for ProcessWire
+
+Inertia allows you to create fully client-side rendered, single-page apps, without much of the complexity that comes with modern SPAs. It does this by leveraging existing server-side frameworks.
+
+Inertia isn't a framework, nor is it a replacement to your existing server-side or client-side frameworks. Rather, it's designed to work with them. Think of Inertia as glue that connects the two. Inertia comes with three official client-side adapters (React, Vue, and Svelte).
+
+This is an adapter for https://processwire.com/[ProcessWire]. Inertia replaces PHP views altogether by returning JavaScript components from controller actions. Those components can be built with your frontend framework of choice.
+
+## References
+
+- https://inertiajs.com/
+- https://sebastiandedeyne.com/inertia-js-and-livewire-a-high-level-comparison/
+- https://medium.com/icf-church-developers/processwire-vue-js-a-lovestory-d4d5bca365
+- https://processwire.com/talk/topic/19112-module-page-query-boss/
+
