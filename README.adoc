@@ -6,6 +6,17 @@ Inertia isn't a framework, nor is it a replacement to your existing server-side 
 
 This is an adapter for https://processwire.com/[ProcessWire]. Inertia replaces PHP views altogether by returning JavaScript components from controller actions. Those components can be built with your frontend framework of choice.
 
+## Features
+
+- [x] Render React/Vue/Svelte from controllers
+- [ ] Flash data passed to props
+- [ ] Assets Versioning: https://inertiajs.com/asset-versioning
+- [ ] Lazy Evaluation: https://inertiajs.com/responses#lazy-evaluation
+- [ ] Auto put response cookie for crsf token: https://inertiajs.com/security#csrf-protection
+- [ ] Override redirect codes: https://inertiajs.com/redirects#303-response-code
+- [ ] Partial reloads: https://inertiajs.com/requests#partial-reloads
+- [ ] Shared data interface: https://inertiajs.com/shared-data
+
 ## References
 
 - https://inertiajs.com/
