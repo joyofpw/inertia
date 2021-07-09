@@ -70,6 +70,10 @@ $inertia = $modules->get('Inertia');
 echo $inertia->render('MyComponent', ["my" => "props"]);
 ```
 
+## Example Project
+
+A sample project is provided at https://github.com/joyofpw/inertia-svelte-mix-pw
+
 ## Other Resources
 
 - https://inertiajs.com/
