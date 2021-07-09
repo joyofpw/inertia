@@ -1,12 +1,10 @@
 <?php namespace ProcessWire;
 
 class Inertia extends WireData implements Module {
-    // Version will invalidate if they differ 
+    // Version will invalidate if they differ
     protected $version = 'undefined';
     // Root view
     protected $view = 'app.view.php';
-    // Options for the $files->render() function
-    protected $options = [];
     // Shared props
     protected $shared = [];
 
@@ -52,11 +50,8 @@ class Inertia extends WireData implements Module {
         return $this;
     }
 
-    public function view($file, $options = null) {
+    public function view($file) {
         $this->view = $file;
-        if ($options) {
-            $this->options = $options;
-        }
         return $this;
     }
 
@@ -65,7 +60,8 @@ class Inertia extends WireData implements Module {
         return $this->shared;
     }
 
-    public function render($component, $properties) {
+    // Options for the $files->render() function
+    public function render($component, $properties, $options = []) {
         $page = wire('page');
         $props = array_merge($this->shared, $properties);
 
@@ -88,11 +84,13 @@ class Inertia extends WireData implements Module {
         // We must render the view
         $files = wire('files');
         return $files->render($this->view, [
-            'inertia' => (object) [
-                'page' => $json,
-                'json' => json_encode($json),
-                'tag' => $this->htmlTag($json)
-            ]
-        ], $this->options);
+                'inertia' => (object) [
+                    'page' => $json,
+                    'json' => json_encode($json),
+                    'tag' => $this->htmlTag($json)
+                ]
+            ],
+            $options
+        );
     }
 }
