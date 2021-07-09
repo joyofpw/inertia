@@ -27,46 +27,47 @@ class Inertia extends WireData implements Module {
     }
 
     private function isInertia() {
-        return ($_SERVER["HTTP_X_INERTIA"] == true);
+        return (isset($_SERVER) &&
+        isset($_SERVER["HTTP_X_INERTIA"]) &&
+        $_SERVER["HTTP_X_INERTIA"] == true);
     }
 
     private function htmlTag ($data) {
-        return "<div id='app' data-page='". json_encode($data) . "'></div>";
+        return "<div id='app' data-page='". htmlentities(json_encode($data)) . "'></div>";
     }
 
     // fluent interface
-    public function share($event) {
-        $key = $event->arguments(0);
-        $value = $event->arguments(1);
+    public function share($key, $value) {
         $this->shared[$key] = $value;
-        $event->return = $this;
+        return $this;
     }
 
-    public function version($event) {
-        $version = $event->arguments(0);
+    public function shareMap($map) {
+        $this->shared = $map;
+        return $this;
+    }
+
+    public function version($version) {
         $this->version = $version;
-        $event->return = $this;
+        return $this;
     }
 
-    public function view($event) {
-        $file = $event->arguments(0);
-        $options = $event->arguments(1);
+    public function view($file, $options = null) {
         $this->view = $file;
         if ($options) {
             $this->options = $options;
         }
-        $event->return = $this;
+        return $this;
     }
 
     // Rendering
-    public function shared($event) {
-        $event->return = $this->shared;
+    public function shared() {
+        return $this->shared;
     }
 
-    public function render($event) {
-        $page = $event->object;
-        $component = $event->arguments(0);
-        $props = array_merge($this->shared, $event->arguments(1));
+    public function render($component, $properties) {
+        $page = wire('page');
+        $props = array_merge($this->shared, $properties);
 
         $json = (object) [
             "component" => $component,
@@ -81,13 +82,12 @@ class Inertia extends WireData implements Module {
             header("Content-type: application/json; charset=utf-8");
             header("X-Inertia: true");
             header("Vary: Accept");
-            $event->return = json_encode($json);
-            return;
+            return json_encode($json);
         }
 
         // We must render the view
-        $view = wire('files');
-        $event->return = $view->render($this->view, [
+        $files = wire('files');
+        return $files->render($this->view, [
             'inertia' => (object) [
                 'page' => $json,
                 'json' => json_encode($json),
