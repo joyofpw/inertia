@@ -80,6 +80,7 @@ A sample project is provided at https://github.com/joyofpw/inertia-svelte-mix-pw
 - https://sebastiandedeyne.com/inertia-js-and-livewire-a-high-level-comparison/
 - https://medium.com/icf-church-developers/processwire-vue-js-a-lovestory-d4d5bca365
 - https://processwire.com/talk/topic/19112-module-page-query-boss/
+- https://github.com/microcipcip/processvue
 
 ## Credits
 
