@@ -9,13 +9,13 @@ This is an adapter for https://processwire.com/[ProcessWire]. Inertia replaces P
 ## Features
 
 - [x] Render React/Vue/Svelte from controllers
-- [ ] Flash data passed to props
-- [ ] Assets Versioning: https://inertiajs.com/asset-versioning
+- [x] Flash data passed to props
+- [x] Assets Versioning: https://inertiajs.com/asset-versioning
 - [ ] Lazy Evaluation: https://inertiajs.com/responses#lazy-evaluation
-- [ ] Auto put response cookie for crsf token: https://inertiajs.com/csrf-protection
-- [ ] Override redirect codes: https://inertiajs.com/redirects#303-response-code
+- [x] Auto put crsf token in props: https://inertiajs.com/csrf-protection
+- [x] Override redirect codes: https://inertiajs.com/redirects#303-response-code
 - [ ] Partial reloads: https://inertiajs.com/partial-reloads
-- [ ] Shared data interface: https://inertiajs.com/shared-data
+- [x] Shared data interface: https://inertiajs.com/shared-data
 
 ## Installation
 
