@@ -81,6 +81,7 @@ A sample project is provided at https://github.com/joyofpw/inertia-svelte-mix-pw
 - https://medium.com/icf-church-developers/processwire-vue-js-a-lovestory-d4d5bca365
 - https://processwire.com/talk/topic/19112-module-page-query-boss/
 - https://github.com/microcipcip/processvue
+- https://github.com/Sebiworld/AppApi
 
 ## Credits
 
