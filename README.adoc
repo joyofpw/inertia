@@ -14,7 +14,7 @@ This is an adapter for https://processwire.com/[ProcessWire]. Inertia replaces P
 - [ ] Lazy Evaluation: https://inertiajs.com/responses#lazy-evaluation
 - [ ] Auto put response cookie for crsf token: https://inertiajs.com/csrf-protection
 - [ ] Override redirect codes: https://inertiajs.com/redirects#303-response-code
-- [ ] Partial reloads: https://inertiajs.com/requests#partial-reloads
+- [ ] Partial reloads: https://inertiajs.com/partial-reloads
 - [ ] Shared data interface: https://inertiajs.com/shared-data
 
 ## Installation
