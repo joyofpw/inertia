@@ -12,7 +12,7 @@ This is an adapter for https://processwire.com/[ProcessWire]. Inertia replaces P
 - [x] Flash data passed to props
 - [x] Assets Versioning: https://inertiajs.com/asset-versioning
 - [ ] Lazy Evaluation: https://inertiajs.com/responses#lazy-evaluation
-- [x] Auto put crsf token in props: https://inertiajs.com/csrf-protection
+- [x] Auto put csrf token in props: https://inertiajs.com/csrf-protection
 - [x] Override redirect codes: https://inertiajs.com/redirects#303-response-code
 - [ ] Partial reloads: https://inertiajs.com/partial-reloads
 - [x] Shared data interface: https://inertiajs.com/shared-data
