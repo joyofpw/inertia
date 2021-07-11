@@ -77,6 +77,8 @@ A sample project is provided at https://github.com/joyofpw/inertia-svelte-mix-pw
 ## Other Resources
 
 - https://inertiajs.com/
+- https://reinink.ca/articles/introducing-inertia-js
+- https://reinink.ca/articles/server-side-apps-with-client-side-rendering
 - https://sebastiandedeyne.com/inertia-js-and-livewire-a-high-level-comparison/
 - https://medium.com/icf-church-developers/processwire-vue-js-a-lovestory-d4d5bca365
 - https://processwire.com/talk/topic/19112-module-page-query-boss/
